@@ -1,0 +1,26 @@
+plugins {
+    id 'war'
+    id 'application'
+}
+
+mainClassName="pt.ipb.sd.App"
+
+repositories {
+    jcenter()
+}
+
+ext {
+    derbyVersion='10.14.2.0'
+    tomeeVersion='8.0.0'
+}
+
+dependencies {
+    implementation 'org.apache.derby:derby:'+derbyVersion
+
+    implementation 'org.apache.tomee:javaee-api:8.0-2'
+    implementation 'org.apache.tomee:tomee-embedded:'+tomeeVersion
+}
+
+run {
+    standardInput = System.in
+}
