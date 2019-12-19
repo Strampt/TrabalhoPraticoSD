@@ -5,6 +5,7 @@ import pt.ipb.sd.entity.Location;
 import javax.ejb.Local;
 import java.util.List;
 
+@Local
 public interface LocationManagerLocal {
     Location create(String city, String country, String metric);
 
