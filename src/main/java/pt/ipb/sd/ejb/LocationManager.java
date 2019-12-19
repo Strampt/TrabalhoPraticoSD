@@ -1,7 +1,5 @@
 package pt.ipb.sd.ejb;
 
-import com.google.common.cache.LoadingCache;
-import pt.ipb.sd.entity.Book;
 import pt.ipb.sd.entity.Location;
 
 import javax.persistence.EntityManager;
