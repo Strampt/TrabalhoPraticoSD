@@ -2,6 +2,7 @@ package pt.ipb.sd.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @NamedQueries({@NamedQuery(name = Weather.COUNT_ALL, query = "SELECT COUNT(b) FROM Weather b"),
@@ -9,12 +10,14 @@ import java.io.Serializable;
         @NamedQuery(name = Weather.BY_WEATHER, query = "SELECT b FROM Weather b WHERE b.weather = :weather"),
         @NamedQuery(name = Weather.COUNT_BY_WEATHER, query = "SELECT COUNT(b) FROM Weather b WHERE b.weather = :weather")})
 
-
 public class Weather implements Serializable{
     public final static String ALL = "pt.ipb.sd.jpa.entity.ALL";
     public final static String COUNT_ALL = "pt.ipb.sd.jpa.entity.Weather.COUNT_ALL";
     public final static String BY_WEATHER = "pt.ipb.sd.jpa.entity.Weather.BY_WEATHER";
     public final static String COUNT_BY_WEATHER = "pt.ipb.pja.entity.Weather.COUNT:BY_WEATHER";
+
+    @ManyToOne
+    Location location;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
