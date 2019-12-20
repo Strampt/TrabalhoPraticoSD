@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b9dd34e-2c12-428f-af8c-ad67d8c3f9c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/add_weather.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/weathers.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ipb/sd/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ipb/sd/entity/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ipb/sd/entity/Weather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ipb/sd/entity/Weather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ipb/sd/rest/LocationRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ipb/sd/rest/LocationRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/locations.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/locations.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booksdb/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/booksdb/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booksdb/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/booksdb/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booksdb/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/booksdb/log/log1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booksdb/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/booksdb/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/add_book.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add_book.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,7 @@
         <option value="Class" />
         <option value="Interface" />
         <option value="jsf" />
+        <option value="XHTML File" />
       </list>
     </option>
   </component>
@@ -71,6 +75,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -169,7 +174,7 @@
     </state>
     <state x="234" y="0" key="#com.intellij.ide.util.MemberChooser.inPresentationMode/0.0.1280.1024@0.0.1280.1024" timestamp="1576496243682" />
     <state x="1258" y="252" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1576598358568" />
-    <state width="1874" height="266" key="GridCell.Tab.0.bottom" timestamp="1576846180365">
+    <state width="1874" height="266" key="GridCell.Tab.0.bottom" timestamp="1576847316533">
       <screen x="0" y="27" width="1920" height="1012" />
     </state>
     <state width="1238" height="332" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1576514714849">
@@ -179,9 +184,9 @@
     <state width="1238" height="286" key="GridCell.Tab.0.bottom/0.0.1280.1024@0.0.1280.1024" timestamp="1576498837651" />
     <state width="1398" height="353" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1576599778855" />
     <state width="1878" height="353" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576598576067" />
-    <state width="1874" height="266" key="GridCell.Tab.0.bottom/0.27.1920.1012@0.27.1920.1012" timestamp="1576846180365" />
+    <state width="1874" height="266" key="GridCell.Tab.0.bottom/0.27.1920.1012@0.27.1920.1012" timestamp="1576847316533" />
     <state width="1874" height="279" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1576666443483" />
-    <state width="1874" height="266" key="GridCell.Tab.0.center" timestamp="1576846180365">
+    <state width="1874" height="266" key="GridCell.Tab.0.center" timestamp="1576847316533">
       <screen x="0" y="27" width="1920" height="1012" />
     </state>
     <state width="1238" height="332" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1576514714847">
@@ -191,9 +196,9 @@
     <state width="1238" height="286" key="GridCell.Tab.0.center/0.0.1280.1024@0.0.1280.1024" timestamp="1576498837650" />
     <state width="1398" height="353" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1576599778854" />
     <state width="1878" height="353" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576598576066" />
-    <state width="1874" height="266" key="GridCell.Tab.0.center/0.27.1920.1012@0.27.1920.1012" timestamp="1576846180365" />
+    <state width="1874" height="266" key="GridCell.Tab.0.center/0.27.1920.1012@0.27.1920.1012" timestamp="1576847316533" />
     <state width="1874" height="279" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1576666443482" />
-    <state width="1874" height="266" key="GridCell.Tab.0.left" timestamp="1576846180364">
+    <state width="1874" height="266" key="GridCell.Tab.0.left" timestamp="1576847316533">
       <screen x="0" y="27" width="1920" height="1012" />
     </state>
     <state width="1238" height="332" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1576514714845">
@@ -203,9 +208,9 @@
     <state width="1238" height="286" key="GridCell.Tab.0.left/0.0.1280.1024@0.0.1280.1024" timestamp="1576498837650" />
     <state width="1398" height="353" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1576599778844" />
     <state width="1878" height="353" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576598576065" />
-    <state width="1874" height="266" key="GridCell.Tab.0.left/0.27.1920.1012@0.27.1920.1012" timestamp="1576846180364" />
+    <state width="1874" height="266" key="GridCell.Tab.0.left/0.27.1920.1012@0.27.1920.1012" timestamp="1576847316533" />
     <state width="1874" height="279" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1576666443482" />
-    <state width="1874" height="266" key="GridCell.Tab.0.right" timestamp="1576846180365">
+    <state width="1874" height="266" key="GridCell.Tab.0.right" timestamp="1576847316533">
       <screen x="0" y="27" width="1920" height="1012" />
     </state>
     <state width="1238" height="332" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1576514714848">
@@ -215,7 +220,7 @@
     <state width="1238" height="286" key="GridCell.Tab.0.right/0.0.1280.1024@0.0.1280.1024" timestamp="1576498837651" />
     <state width="1398" height="353" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1576599778855" />
     <state width="1878" height="353" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576598576066" />
-    <state width="1874" height="266" key="GridCell.Tab.0.right/0.27.1920.1012@0.27.1920.1012" timestamp="1576846180365" />
+    <state width="1874" height="266" key="GridCell.Tab.0.right/0.27.1920.1012@0.27.1920.1012" timestamp="1576847316533" />
     <state width="1874" height="279" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1576666443482" />
     <state x="1228" y="326" key="chooseDestDirectoryDialog" timestamp="1576596665286">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -229,10 +234,10 @@
     <state x="270" y="336" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576596524742" />
     <state x="203" y="296" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1576492779463" />
     <state x="270" y="355" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576754058937" />
-    <state x="711" y="225" width="488" height="603" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576843702597">
+    <state x="711" y="225" width="488" height="599" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576847085727">
       <screen x="0" y="27" width="1920" height="1012" />
     </state>
-    <state x="711" y="225" width="488" height="603" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1012@0.27.1920.1012" timestamp="1576843702597" />
+    <state x="711" y="225" width="488" height="599" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1012@0.27.1920.1012" timestamp="1576847085727" />
     <state x="623" y="259" key="search.everywhere.popup" timestamp="1576663512661">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
