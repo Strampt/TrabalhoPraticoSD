@@ -8,7 +8,7 @@ import java.util.List;
 
 public class LocationManager implements LocationManagerLocal, LocationManagerRemote {
 
-    @PersistenceContext(unitName = "locations-pu")
+    @PersistenceContext(unitName = "meteo-pu")
     EntityManager entityManager;
 
     @Override

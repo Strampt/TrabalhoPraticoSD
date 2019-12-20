@@ -9,7 +9,7 @@ import java.util.List;
 
 public class WeatherManager implements WeatherManagerLocal, WeatherManagerRemote {
 
-    @PersistenceContext(unitName = "weather-pu")
+    @PersistenceContext(unitName = "meteo-pu")
     EntityManager entityManager;
 
     @Override
