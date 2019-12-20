@@ -12,7 +12,7 @@ import java.util.List;
 @Stateless
 public class BookManager implements BookManagerLocal, BookManagerRemote {
 
-    @PersistenceContext(unitName = "books-pu")
+    @PersistenceContext(unitName = "meteo-pu")
     EntityManager entityManager;
 
 
