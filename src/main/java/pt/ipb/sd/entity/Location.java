@@ -2,7 +2,10 @@ package pt.ipb.sd.entity;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Null;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @NamedQueries({@NamedQuery(name = Location.COUNT_ALL, query = "SELECT COUNT(b) FROM Location b"),
@@ -15,6 +18,9 @@ public class Location implements Serializable {
     public final static String COUNT_ALL = "pt.ipb.sd.jpa.entity.Location.COUNT_ALL";
     public final static String BY_CITY = "pt.ipb.sd.jpa.entity.Location.BY_CITY";
     public final static String COUNT_BY_CITY = "pt.ipb.sd.jpa.entity.Location.COUNT_BY_CITY";
+
+    @OneToMany(mappedBy = "location")
+    List<Weather> weathers;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

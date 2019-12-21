@@ -6,27 +6,27 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Creates a new book</title>
+    <title>Creates a new weather</title>
 </h:head>
 <h:body>
-    <h1>Create a new book</h1>
+    <h1>Create a new weather</h1>
     <hr/>
     <h:form>
         <table border="0">
             <tr>
                 <td><h:outputLabel value="Weather : "/></td>
-                <td><h:inputText value="#{booksBackingBean.isbn}"/></td>
+                <td><h:inputText value="#{weatherBackingBean.weather}"/></td>
             </tr>
             <tr>
                 <td><h:outputLabel value="Description :"/> </td>
-                <td><h:inputText value="#{booksBackingBean.title}"/></td>
+                <td><h:inputText value="#{weatherBackingBean.description}"/></td>
             </tr>
             <tr>
-                <td><h:outputLabel value="Authors :"/> </td>
-                <td><h:inputText value="#{booksBackingBean.authors}"/></td>
+                <td><h:outputLabel value="Temperature :"/> </td>
+                <td><h:inputText value="#{weatherBackingBean.temperature}"/></td>
             </tr>
         </table>
-        <h:commandButton value="Create a book" action="#{booksBackingBean.doCreateBook}" styleClass="submit"/>
+        <h:commandButton value="Create a weather" action="#{weatherBackingBean.doCreateWeather}" styleClass="submit"/>
     </h:form>
     <hr/>
 

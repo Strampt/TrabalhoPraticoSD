@@ -8,13 +8,13 @@
 </head>
 <body>
 <h:form>
-    <h:outputLabel value="Name:" />
-    <h:outputText value="#{locationsBackingBean.city}" />
+    <h:outputLabel value="Weather:" />
+    <h:outputText value="#{weatherBackingBean.weather}" />
 
 
     <ul>
-        <ui:repeat value="#{locationsBackingBean.locations}" var="value">
-            <li>#{value.location} </li>
+        <ui:repeat value="#{weatherBackingBean.temperature}" var="value">
+            <li>#{value.temperature} </li>
         </ui:repeat>
     </ul>
 </h:form>
