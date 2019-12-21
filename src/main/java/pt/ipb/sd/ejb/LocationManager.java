@@ -2,17 +2,21 @@ package pt.ipb.sd.ejb;
 
 import pt.ipb.sd.entity.Location;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@Stateless
 public class LocationManager implements LocationManagerLocal, LocationManagerRemote {
 
     @PersistenceContext(unitName = "meteo-pu")
     EntityManager entityManager;
 
+    // Location location
     @Override
     public Location create(String city, String country, String metric) {
+        // comentar em baixo
         Location location = new Location(city, country, metric);
         entityManager.persist(location);
         return location;

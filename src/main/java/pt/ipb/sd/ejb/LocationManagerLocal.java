@@ -7,6 +7,7 @@ import java.util.List;
 
 @Local
 public interface LocationManagerLocal {
+    // Location location
     Location create(String city, String country, String metric);
 
     List<Location> getLocations();
