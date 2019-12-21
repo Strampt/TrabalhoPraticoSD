@@ -2,11 +2,13 @@ package pt.ipb.sd.ejb;
 
 import pt.ipb.sd.entity.Weather;
 
+import javax.ejb.Stateless;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@Stateless
 public class WeatherManager implements WeatherManagerLocal, WeatherManagerRemote {
 
     @PersistenceContext(unitName = "meteo-pu")
