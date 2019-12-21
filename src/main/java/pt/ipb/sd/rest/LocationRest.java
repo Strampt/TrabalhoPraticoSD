@@ -1,6 +1,6 @@
 package pt.ipb.sd.rest;
 
-import pt.ipb.sd.ejb.LocationManager;
+import pt.ipb.sd.ejb.LocationManagerRemote;
 import pt.ipb.sd.entity.Location;
 
 import javax.ejb.EJB;
@@ -16,7 +16,7 @@ import java.util.List;
 @Path("/api/locations")
 public class LocationRest {
     @EJB
-    LocationManager locationManager;
+    LocationManagerRemote locationManager;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
