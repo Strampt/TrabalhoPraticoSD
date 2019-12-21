@@ -36,6 +36,10 @@ public class Location implements Serializable {
         this.metric = metric;
     }
 
+    public Location() {
+
+    }
+
     public long getId() {
         return id;
     }
