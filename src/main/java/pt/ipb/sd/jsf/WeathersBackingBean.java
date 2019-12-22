@@ -50,7 +50,7 @@ public class WeatherBackingBean {
     }
 
     public String doCreateWeather(){
-        this.weatherManager.create(getWeather(), getDescription(), getTemperature(), LocalDate.now());
+        this.weatherManager.create(getWeather(), getDescription(), getTemperature());
         return "weathers";
     }
 
