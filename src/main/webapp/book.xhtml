@@ -8,16 +8,18 @@
 </head>
 <body>
 <h:form>
+
     <h:outputLabel value="Name:" />
-    <h:outputText value="#{booksBackingBean.name}" />
+    <h:outputText value="#{booksBackingBean.books}" />
 
 
     <ul>
         <ui:repeat value="#{booksBackingBean.books}" var="value">
-            <li><h:link outcome="book">
-                <f:param name='isbn' value='#{bean.isbn}' />
+            <li>
                 #{value.title}
-                </h:link>
+            </li>
+            <li>
+                #{value.isbn}
             </li>
         </ui:repeat>
     </ul>

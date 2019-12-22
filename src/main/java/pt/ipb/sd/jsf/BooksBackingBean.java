@@ -5,6 +5,7 @@ import pt.ipb.sd.entity.Book;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.annotation.ManagedProperty;
 import javax.inject.Named;
 import java.time.LocalDate;
 import java.util.List;
@@ -15,6 +16,7 @@ public class BooksBackingBean {
 
     @EJB
     BookManagerRemote bookManager;
+    @ManagedProperty("#{param.isbn}")
     String isbn;
     String authors;
     String title;
