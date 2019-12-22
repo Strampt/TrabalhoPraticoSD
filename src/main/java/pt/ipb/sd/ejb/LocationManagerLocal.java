@@ -7,8 +7,7 @@ import java.util.List;
 
 @Local
 public interface LocationManagerLocal {
-    // Location location
-    Location create(String city, String country, String metric);
+    Location create(String city, String country, String unit);
 
     List<Location> getLocations();
 

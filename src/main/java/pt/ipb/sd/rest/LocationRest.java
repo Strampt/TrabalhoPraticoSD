@@ -10,7 +10,6 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/api/locations")
@@ -20,14 +19,16 @@ public class LocationRest {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Location> list() { return locationManager.getLocations(); }
+    public List<Location> list() {
+        return locationManager.getLocations();
+    }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
     public String create(Location location) {
         Client client = ClientBuilder.newClient();
-        Location newLocation = locationManager.create(location.getCity(), location.getCountry(), location.getMetric());
+        Location newLocation = locationManager.create(location.getCity(), location.getCountry(), location.getUnit());
         WebTarget target = client.target("http://localhost/api/locations");
         String response = target.request(MediaType.APPLICATION_JSON)
                 .accept(MediaType.TEXT_PLAIN_TYPE)
@@ -37,5 +38,5 @@ public class LocationRest {
 
     @DELETE
     @Path("{id}")
-    public void deleteLocationById(@PathParam("id") long id) { locationManager.delete(id);}
+    public void deleteLocationById(@PathParam("id") long id) {locationManager.delete(id);}
 }

@@ -15,18 +15,18 @@
         <table border="0">
             <tr>
                 <td><h:outputLabel value="CITY : "/></td>
-                <td><h:inputText value="#{locationBackingBean.city}"/></td>
+                <td><h:inputText value="#{locationsBackingBean.city}"/></td>
             </tr>
             <tr>
                 <td><h:outputLabel value="COUNTRY :"/> </td>
-                <td><h:inputText value="#{locationBackingBean.country}"/></td>
+                <td><h:inputText value="#{locationsBackingBean.country}"/></td>
             </tr>
             <tr>
                 <td><h:outputLabel value="UNIT :"/> </td>
-                <td><h:inputText value="#{locationBackingBean.unit}"/></td>
+                <td><h:inputText value="#{locationsBackingBean.unit}"/></td>
             </tr>
         </table>
-        <h:commandButton value="Create a location" action="#{locationBackingBean.doCreateLocation}" styleClass="submit"/>
+        <h:commandButton value="Create a location" action="#{locationsBackingBean.doCreateLocation}" styleClass="submit"/>
     </h:form>
     <hr/>
 

@@ -6,7 +6,7 @@
         <jta-data-source>meteodb</jta-data-source>
         <class>pt.ipb.sd.entity.Location</class>
         <class>pt.ipb.sd.entity.Weather</class>
-        <class>pt.ipb.sd.entity.Book</class>
+
         <properties>
             <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
         </properties>

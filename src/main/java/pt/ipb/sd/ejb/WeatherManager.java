@@ -3,10 +3,8 @@ package pt.ipb.sd.ejb;
 import pt.ipb.sd.entity.Weather;
 
 import javax.ejb.Stateless;
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.time.LocalDate;
 import java.util.List;
 
 @Stateless
@@ -15,8 +13,8 @@ public class WeatherManager implements WeatherManagerLocal, WeatherManagerRemote
     @PersistenceContext(unitName = "meteo-pu")
     EntityManager entityManager;
 
-    public Weather create(String weather, String description, String temperature, LocalDate date){
-        Weather weatherob = new Weather(weather, description, temperature, date);
+    public Weather create(String weather, String description, String temperature){
+        Weather weatherob = new Weather(weather, description, temperature);
         entityManager.persist(weather);
         return weatherob;
     }

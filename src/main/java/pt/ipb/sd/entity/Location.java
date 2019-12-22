@@ -2,25 +2,19 @@ package pt.ipb.sd.entity;
 
 
 import javax.persistence.*;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Null;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@NamedQueries({@NamedQuery(name = Location.COUNT_ALL, query = "SELECT COUNT(b) FROM Location b"),
-        @NamedQuery(name = Location.ALL, query = "SELECT b FROM Location b"),
-        @NamedQuery(name = Location.BY_CITY, query = "SELECT b FROM Location b WHERE b.city = :city"),
-        @NamedQuery(name = Location.COUNT_BY_CITY, query = "SELECT COUNT(b) FROM Location b WHERE b.city = :city")})
+@NamedQueries({
+        @NamedQuery(name = Location.ALL, query = "Select b FROM Location b")
+})
 
 public class Location implements Serializable {
-    public final static String ALL = "pt.ipb.sd.jpa.entity.Location.ALL";
-    public final static String COUNT_ALL = "pt.ipb.sd.jpa.entity.Location.COUNT_ALL";
-    public final static String BY_CITY = "pt.ipb.sd.jpa.entity.Location.BY_CITY";
-    public final static String COUNT_BY_CITY = "pt.ipb.sd.jpa.entity.Location.COUNT_BY_CITY";
+    public final static String ALL = "pt.ipb.sd.jpa.entity.Location.All";
 
-    @OneToMany(mappedBy = "location", fetch = FetchType.EAGER)
-    List<Weather> weathers;
+    @OneToMany(mappedBy = "location")
+    private List<Weather> weathers;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,25 +22,17 @@ public class Location implements Serializable {
 
     String city;
     String country;
-    String metric;
+    String unit;
 
-    public Location(String city, String country, String metric) {
+    public Location(String city, String country, String unit){
         this.city = city;
         this.country = country;
-        this.metric = metric;
+        this.unit = unit;
     }
 
     public Location() {
-
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getCity() {
         return city;
@@ -64,11 +50,11 @@ public class Location implements Serializable {
         this.country = country;
     }
 
-    public String getMetric() {
-        return metric;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setMetric(String metric) {
-        this.metric = metric;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 }

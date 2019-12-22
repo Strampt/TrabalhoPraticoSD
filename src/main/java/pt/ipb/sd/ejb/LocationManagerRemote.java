@@ -1,4 +1,7 @@
 package pt.ipb.sd.ejb;
 
-public interface LocationManagerRemote extends LocationManagerLocal {
+import javax.ejb.Remote;
+
+@Remote
+public interface LocationManagerRemote extends LocationManagerLocal{
 }
