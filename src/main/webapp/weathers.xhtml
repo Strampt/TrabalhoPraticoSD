@@ -4,7 +4,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
 <head>
-    <title>Books</title>
+    <title>weathers</title>
 </head>
 <body>
 <h:form>
@@ -13,7 +13,7 @@
 
 
     <ul>
-        <ui:repeat value="#{weathersBackingBean.weathers}" var="value">
+        <ui:repeat value="#{weathersBackingBean.weather}" var="value">
             <li>#{value.weather} </li>
         </ui:repeat>
     </ul>
