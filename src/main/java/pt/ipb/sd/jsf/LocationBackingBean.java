@@ -1,6 +1,7 @@
 package pt.ipb.sd.jsf;
 
 import pt.ipb.sd.ejb.LocationManager;
+import pt.ipb.sd.ejb.LocationManagerRemote;
 import pt.ipb.sd.entity.Location;
 
 import javax.ejb.EJB;
@@ -13,7 +14,7 @@ import java.util.List;
 public class LocationBackingBean {
 
     @EJB
-    LocationManager locationManager;
+    LocationManagerRemote locationManager;
     String city;
     String country;
     String unit;

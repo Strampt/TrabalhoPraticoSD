@@ -2,6 +2,7 @@ package pt.ipb.sd.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -11,12 +12,12 @@ import java.util.List;
         @NamedQuery(name = Weather.COUNT_BY_WEATHER, query = "SELECT COUNT(b) FROM Weather b WHERE b.weather = :weather")})
 
 public class Weather implements Serializable{
-    public final static String ALL = "pt.ipb.sd.jpa.entity.ALL";
+    public final static String ALL = "pt.ipb.sd.jpa.entity.Weather.ALL";
     public final static String COUNT_ALL = "pt.ipb.sd.jpa.entity.Weather.COUNT_ALL";
     public final static String BY_WEATHER = "pt.ipb.sd.jpa.entity.Weather.BY_WEATHER";
-    public final static String COUNT_BY_WEATHER = "pt.ipb.pja.entity.Weather.COUNT:BY_WEATHER";
+    public final static String COUNT_BY_WEATHER = "pt.ipb.jpa.entity.Weather.COUNT_BY_WEATHER";
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     Location location;
 
     @Id
@@ -26,8 +27,9 @@ public class Weather implements Serializable{
     String weather;
     String description;
     String temperature;
+    LocalDate date;
 
-    public Weather(String weather, String description, String temperature){
+    public Weather(String weather, String description, String temperature, LocalDate date){
         this.weather = weather;
         this.description = description;
         this.temperature = temperature;
@@ -37,31 +39,43 @@ public class Weather implements Serializable{
 
     }
 
-    public long getId() {return id;}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-    public void setId(long id) {this.id = id; }
-
-    public String getWeather() {
-        return weather;
+    public long getId() {
+        return id;
     }
 
     public void setWeather(String weather) {
         this.weather = weather;
     }
 
-    public String getDescription() {
-        return description;
+    public String getWeather() {
+        return weather;
     }
 
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getTemperature() {
-        return temperature;
+    public String getDescription() {
+        return description;
     }
 
     public void setTemperature(String temperature) {
         this.temperature = temperature;
+    }
+
+    public String getTemperature() {
+        return temperature;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 }

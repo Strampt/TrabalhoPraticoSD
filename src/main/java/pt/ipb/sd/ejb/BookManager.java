@@ -25,9 +25,9 @@ public class BookManager implements BookManagerLocal, BookManagerRemote {
 
     @Override
     public List<Book> getBooks() {
-        List<Book> l = entityManager.createNamedQuery(Book.ALL, Book.class)
+        List<Book> b = entityManager.createNamedQuery(Book.ALL, Book.class)
                 .getResultList();
-        return l;
+        return b;
     }
 
     @Override

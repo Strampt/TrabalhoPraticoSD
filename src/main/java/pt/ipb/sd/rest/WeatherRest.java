@@ -31,7 +31,7 @@ public class WeatherRest {
     @Produces(MediaType.TEXT_PLAIN)
     public String create(Weather weather){
         Client client = ClientBuilder.newClient();
-        Weather newWeather = weatherManager.create(weather.getWeather(), weather.getDescription(), weather.getTemperature());
+        Weather newWeather = weatherManager.create(weather.getWeather(), weather.getDescription(), weather.getTemperature(), weather.getDate());
         WebTarget target = client.target("http://localhost/api/weathers");
         String response = target.request(MediaType.APPLICATION_JSON)
                 .accept(MediaType.TEXT_PLAIN_TYPE)

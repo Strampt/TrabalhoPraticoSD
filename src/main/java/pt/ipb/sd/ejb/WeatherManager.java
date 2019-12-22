@@ -6,6 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.time.LocalDate;
 import java.util.List;
 
 @Stateless
@@ -14,17 +15,16 @@ public class WeatherManager implements WeatherManagerLocal, WeatherManagerRemote
     @PersistenceContext(unitName = "meteo-pu")
     EntityManager entityManager;
 
-    @Override
-    public Weather create(String weather, String description, String temperature){
-        Weather weatherob = new Weather(weather, description, temperature);
+    public Weather create(String weather, String description, String temperature, LocalDate date){
+        Weather weatherob = new Weather(weather, description, temperature, date);
         entityManager.persist(weather);
         return weatherob;
     }
 
     @Override
     public List<Weather> getWeathers(){
-        List<Weather> l = entityManager.createNamedQuery(Weather.ALL, Weather.class).getResultList();
-        return l;
+        List<Weather> w = entityManager.createNamedQuery(Weather.ALL, Weather.class).getResultList();
+        return w;
     }
 
     @Override

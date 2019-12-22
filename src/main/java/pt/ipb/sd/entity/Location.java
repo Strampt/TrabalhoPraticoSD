@@ -19,7 +19,7 @@ public class Location implements Serializable {
     public final static String BY_CITY = "pt.ipb.sd.jpa.entity.Location.BY_CITY";
     public final static String COUNT_BY_CITY = "pt.ipb.sd.jpa.entity.Location.COUNT_BY_CITY";
 
-    @OneToMany(mappedBy = "location")
+    @OneToMany(mappedBy = "location", fetch = FetchType.EAGER)
     List<Weather> weathers;
 
     @Id
