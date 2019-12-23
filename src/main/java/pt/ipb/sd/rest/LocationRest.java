@@ -37,7 +37,6 @@ public class LocationRest {
         return response;
     }
 
-
     @DELETE
     @Path("{id}")
     public void deleteLocationById(@PathParam("id") long id) {locationManager.delete(id);}

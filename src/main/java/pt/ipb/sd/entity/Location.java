@@ -1,6 +1,5 @@
 package pt.ipb.sd.entity;
 
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.List;
 public class Location implements Serializable {
     public final static String ALL = "pt.ipb.sd.jpa.entity.Location.All";
 
-    @OneToMany(mappedBy = "location")
+    @OneToMany(mappedBy = "location", fetch = FetchType.LAZY)
     private List<Weather> weathers;
 
     @Id
