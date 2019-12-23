@@ -25,9 +25,15 @@ public class WeatherRest {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response create(Weather weather){
+    @Produces(MediaType.TEXT_PLAIN)
+    public String create(Weather weather) {
+        Client client = ClientBuilder.newClient();
         Weather newWeather = weatherManager.create(weather.getWeather(), weather.getDescription(), weather.getTemperature());
-        return Response.status(200).entity(newWeather).build();
+        WebTarget target = client.target("http://localhost/api/weathers");
+        String response = target.request(MediaType.APPLICATION_JSON)
+                .accept(MediaType.TEXT_HTML_TYPE)
+                .post(Entity.json(newWeather), String.class);
+        return response;
     }
 
     @DELETE
