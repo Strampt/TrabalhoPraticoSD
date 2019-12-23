@@ -1,7 +1,5 @@
 package pt.ipb.sd.jsf;
 
-import pt.ipb.sd.ejb.LocationManager;
-import pt.ipb.sd.ejb.LocationManagerLocal;
 import pt.ipb.sd.ejb.LocationManagerRemote;
 import pt.ipb.sd.entity.Location;
 

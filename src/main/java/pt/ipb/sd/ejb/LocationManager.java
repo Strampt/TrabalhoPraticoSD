@@ -22,8 +22,7 @@ public class LocationManager implements LocationManagerLocal, LocationManagerRem
 
     @Override
     public List<Location> getLocations() {
-        List<Location> l = entityManager.createNamedQuery(Location.ALL, Location.class)
-                .getResultList();
+        List<Location> l = entityManager.createNamedQuery(Location.ALL, Location.class).getResultList();
         return l;
     }
 

@@ -33,6 +33,13 @@ public class Location implements Serializable {
     public Location() {
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
 
     public String getCity() {
         return city;

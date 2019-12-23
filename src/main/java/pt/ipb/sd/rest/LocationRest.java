@@ -26,10 +26,17 @@ public class LocationRest {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response create(Location location){
+    @Produces(MediaType.TEXT_PLAIN)
+    public String create(Location location) {
+        Client client = ClientBuilder.newClient();
         Location newLocation = locationManager.create(location.getCity(), location.getCountry(), location.getUnit());
-        return Response.status(200).entity(newLocation).build();
+        WebTarget target = client.target("http://localhost/api/locations");
+        String response = target.request(MediaType.APPLICATION_JSON)
+                .accept(MediaType.TEXT_PLAIN_TYPE)
+                .post(Entity.json(newLocation), String.class);
+        return response;
     }
+
 
     @DELETE
     @Path("{id}")
