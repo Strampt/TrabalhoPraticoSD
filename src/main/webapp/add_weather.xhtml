@@ -14,16 +14,18 @@
     <h:form>
         <table border="0">
             <tr>
-                <td><h:outputLabel value="WEATHER : "/></td>
+                <td><h:outputLabel value="Weather : "/></td>
                 <td><h:inputText value="#{weathersBackingBean.weather}"/></td>
             </tr>
             <tr>
-                <td><h:outputLabel value="DESCRIPTION :"/> </td>
+                <td><h:outputLabel value="Description :"/> </td>
                 <td><h:inputText value="#{weathersBackingBean.description}"/></td>
             </tr>
             <tr>
-                <td><h:outputLabel value="TEMPERATURE :"/> </td>
+                <td><h:outputLabel value="Temperature :"/> </td>
                 <td><h:inputText value="#{weathersBackingBean.temperature}"/></td>
+            </tr>
+            <tr>
             </tr>
         </table>
         <h:commandButton value="Create a weather" action="#{weathersBackingBean.doCreateWeather}" styleClass="submit"/>

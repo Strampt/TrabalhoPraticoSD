@@ -8,15 +8,13 @@
 </head>
 <body>
 <h:form>
-    <h:outputLabel value="Name:" />
+    <h:outputLabel value="Name: " />
     <h:outputText value="#{locationsBackingBean.name}" />
+
 
     <ul>
         <ui:repeat value="#{locationsBackingBean.locations}" var="value">
-            <li><h:link outcome="city">
-                #{value.city}
-            </h:link>
-            </li>
+            <li>#{value.city} </li>
         </ui:repeat>
     </ul>
 </h:form>

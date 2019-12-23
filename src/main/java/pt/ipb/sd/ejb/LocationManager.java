@@ -13,6 +13,7 @@ public class LocationManager implements LocationManagerLocal, LocationManagerRem
     @PersistenceContext(unitName = "meteo-pu")
     EntityManager entityManager;
 
+    @Override
     public Location create(String city, String country, String unit) {
         Location location = new Location(city, country, unit);
         entityManager.persist(location);
@@ -21,7 +22,8 @@ public class LocationManager implements LocationManagerLocal, LocationManagerRem
 
     @Override
     public List<Location> getLocations() {
-        List<Location> l = entityManager.createNamedQuery(Location.ALL, Location.class).getResultList();
+        List<Location> l = entityManager.createNamedQuery(Location.ALL, Location.class)
+                .getResultList();
         return l;
     }
 

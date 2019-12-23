@@ -11,9 +11,9 @@ public interface WeatherManagerLocal {
 
     List<Weather> getWeathers();
 
-    Weather update(Weather weatherob);
+    Weather update(Weather weather);
 
-    void delete(Weather weatherob);
+    void delete(Weather weather);
 
     void delete(long id);
 }

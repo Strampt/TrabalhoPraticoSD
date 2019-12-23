@@ -1,6 +1,5 @@
 package pt.ipb.sd.rest;
 
-import pt.ipb.sd.ejb.WeatherManager;
 import pt.ipb.sd.ejb.WeatherManagerRemote;
 import pt.ipb.sd.entity.Weather;
 
@@ -11,7 +10,6 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/api/weathers")
@@ -26,8 +24,8 @@ public class WeatherRest {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
-    public String create(Weather weather) {
-        Client client = ClientBuilder.newClient();
+    public String create(Weather weather){
+        Client client =  ClientBuilder.newClient();
         Weather newWeather = weatherManager.create(weather.getWeather(), weather.getDescription(), weather.getTemperature());
         WebTarget target = client.target("http://localhost/api/weathers");
         String response = target.request(MediaType.APPLICATION_JSON)
@@ -38,6 +36,6 @@ public class WeatherRest {
 
     @DELETE
     @Path("{id}")
-    public void deleteWeatherById(@PathParam("id") long id) {weatherManager.delete(id);}
+    public void deleteWeatherById(@PathParam("id") long id) { weatherManager.delete(id); }
 
 }

@@ -4,19 +4,17 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
 <head>
-    <title>weathers</title>
+    <title>Weathers</title>
 </head>
 <body>
 <h:form>
-    <h:outputLabel value="weather:" />
+    <h:outputLabel value="Name:" />
     <h:outputText value="#{weathersBackingBean.name}" />
+
 
     <ul>
         <ui:repeat value="#{weathersBackingBean.weathers}" var="value">
-            <li><h:link outcome="weather">
-                #{value.weather}
-            </h:link>
-            </li>
+            <li>#{value.weather} </li>
         </ui:repeat>
     </ul>
 </h:form>

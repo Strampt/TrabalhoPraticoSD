@@ -18,7 +18,8 @@ public class WeathersBackingBean {
     String description;
     String temperature;
 
-    public List<Weather> getWeathers(){ return weatherManager.getWeathers();}
+    public List<Weather> getWeathers(){ return weatherManager.getWeathers();
+    }
 
     public String getName(){return "testing... one, two, three... testing";}
 

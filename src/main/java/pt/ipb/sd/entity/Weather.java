@@ -12,11 +12,11 @@ import java.util.List;
 public class Weather implements Serializable {
     public final static String ALL = "pt.ipb.sd.jpa.entity.Weather.ALL";
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Location location;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     long id;
 
     String weather;
@@ -33,12 +33,12 @@ public class Weather implements Serializable {
 
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getWeather() {
@@ -65,6 +65,3 @@ public class Weather implements Serializable {
         this.temperature = temperature;
     }
 }
-
-
-

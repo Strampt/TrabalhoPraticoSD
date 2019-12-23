@@ -1,5 +1,6 @@
 package pt.ipb.sd.entity;
 
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -12,11 +13,11 @@ import java.util.List;
 public class Location implements Serializable {
     public final static String ALL = "pt.ipb.sd.jpa.entity.Location.All";
 
-    @OneToMany(mappedBy = "location", fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "location")
     private List<Weather> weathers;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     long id;
 
     String city;
@@ -32,12 +33,12 @@ public class Location implements Serializable {
     public Location() {
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public long getId() {
         return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getCity() {
