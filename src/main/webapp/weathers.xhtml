@@ -8,13 +8,15 @@
 </head>
 <body>
 <h:form>
-    <h:outputLabel value="Name:" />
+    <h:outputLabel value="weather:" />
     <h:outputText value="#{weathersBackingBean.name}" />
 
-
     <ul>
-        <ui:repeat value="#{weathersBackingBean.weather}" var="value">
-            <li>#{value.weather} </li>
+        <ui:repeat value="#{weathersBackingBean.weathers}" var="value">
+            <li><h:link outcome="weather">
+                #{value.weather}
+            </h:link>
+            </li>
         </ui:repeat>
     </ul>
 </h:form>
