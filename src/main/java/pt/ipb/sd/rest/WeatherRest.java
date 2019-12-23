@@ -1,5 +1,6 @@
 package pt.ipb.sd.rest;
 
+import pt.ipb.sd.ejb.WeatherManager;
 import pt.ipb.sd.ejb.WeatherManagerRemote;
 import pt.ipb.sd.entity.Weather;
 
@@ -10,6 +11,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/api/weathers")
@@ -23,15 +25,9 @@ public class WeatherRest {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.TEXT_PLAIN)
-    public String create(Weather weather){
-        Client client =  ClientBuilder.newClient();
+    public Response create(Weather weather){
         Weather newWeather = weatherManager.create(weather.getWeather(), weather.getDescription(), weather.getTemperature());
-        WebTarget target = client.target("http://localhost/api/weathers");
-        String response = target.request(MediaType.APPLICATION_JSON)
-                .accept(MediaType.TEXT_HTML_TYPE)
-                .post(Entity.json(newWeather), String.class);
-        return response;
+        return Response.status(200).entity(newWeather).build();
     }
 
     @DELETE

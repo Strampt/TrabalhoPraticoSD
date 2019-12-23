@@ -15,7 +15,7 @@ public class WeatherManager implements WeatherManagerLocal, WeatherManagerRemote
 
     public Weather create(String weather, String description, String temperature){
         Weather weatherob = new Weather(weather, description, temperature);
-        entityManager.persist(weather);
+        entityManager.persist(weatherob);
         return weatherob;
     }
 
