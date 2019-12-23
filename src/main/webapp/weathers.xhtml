@@ -8,10 +8,6 @@
 </head>
 <body>
 <h:form>
-    <h:outputLabel value="Name:" />
-    <h:outputText value="#{weathersBackingBean.name}" />
-
-
     <ul>
         <ui:repeat value="#{weathersBackingBean.weathers}" var="value">
             <li>#{value.weather} </li>

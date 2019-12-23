@@ -8,10 +8,6 @@
 </head>
 <body>
 <h:form>
-    <h:outputLabel value="Name: " />
-    <h:outputText value="#{locationsBackingBean.name}" />
-
-
     <ul>
         <ui:repeat value="#{locationsBackingBean.locations}" var="value">
             <li>#{value.city} </li>
